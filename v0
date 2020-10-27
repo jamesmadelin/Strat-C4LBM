@@ -1,0 +1,10 @@
+value1 = (close-close[1]) / close[0] * 100;
+value2 = Dayofmonth(date);
+
+If value2 < value2[1] and value1 < -0.2 and close < open then buy this bar on close;
+If value2 < value2[1] and value1 >  0.2 and close > open then sellshort this bar on close;
+
+If barsSinceEntry >= 5 then sell this bar on close;
+If barsSinceEntry >= 5 then buytocover this bar on close;
+
+setStopLoss(2000);
