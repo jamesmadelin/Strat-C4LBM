@@ -1,2 +1,4 @@
-If Dayofmonth(date) < Dayofmonth(date)[1] and ((close-close[1]) / close[0] * 100) < -0.2 and close < open then buy this bar on close;
-If Dayofmonth(date) < Dayofmonth(date)[1] and ((close-close[1]) / close[0] * 100) >  0.2 and close > open then sellshort this bar on close;
+Inputs: VariableX(0.2);
+
+If ((close-close[1]) / (close[0] * 100)) < (1 - (VariableX * -1)) and close < open then buy this bar on close;
+If ((close-close[1]) / (close[0] * 100)) >  (1 - VariableX) and close > open then sellshort this bar on close;
